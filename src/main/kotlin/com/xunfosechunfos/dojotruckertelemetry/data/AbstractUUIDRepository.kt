@@ -6,7 +6,7 @@ import java.util.*
 import java.util.logging.Logger
 
 abstract class AbstractUUIDRepository(private val resourcePath: String) {
-    private val repository = HashSet<UUID>()
+    val repository = mutableListOf<UUID>()
 
     fun put(item: UUID) {
         repository.add(item)
